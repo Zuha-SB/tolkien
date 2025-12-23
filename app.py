@@ -255,6 +255,149 @@ st.markdown("""
         font-family: 'Crimson Text', serif;
         color: #a89a7c;
     }
+    
+    /* ============================================================================
+       Mobile Responsive Styles
+       ============================================================================ */
+    
+    @media screen and (max-width: 768px) {
+        /* Main title - smaller on mobile */
+        .main-title {
+            font-size: 1.8rem;
+            letter-spacing: 2px;
+            padding: 0 0.5rem;
+        }
+        
+        .subtitle {
+            font-size: 1rem;
+            padding: 0 0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Ring divider - smaller spacing */
+        .ring-divider {
+            font-size: 1.2rem;
+            letter-spacing: 5px;
+            margin: 0.5rem 0;
+        }
+        
+        /* Sidebar adjustments */
+        [data-testid="stSidebar"] {
+            min-width: 100% !important;
+            max-width: 100% !important;
+        }
+        
+        [data-testid="stSidebar"] .stMarkdown h1,
+        [data-testid="stSidebar"] .stMarkdown h2,
+        [data-testid="stSidebar"] .stMarkdown h3 {
+            font-size: 1.2rem;
+        }
+        
+        /* Character info box - less padding on mobile */
+        .character-info {
+            padding: 1rem;
+            margin: 0.75rem 0;
+            font-size: 0.95rem;
+        }
+        
+        .character-info h4 {
+            font-size: 1.1rem;
+        }
+        
+        /* Chat messages - better mobile spacing */
+        [data-testid="stChatMessage"] {
+            padding: 0.75rem;
+            margin: 0.4rem 0;
+            border-radius: 12px;
+        }
+        
+        [data-testid="stChatMessage"] p {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+        
+        /* Chat input - larger touch target */
+        [data-testid="stChatInput"] textarea {
+            font-size: 16px !important; /* Prevents zoom on iOS */
+            min-height: 48px !important; /* Touch-friendly */
+            padding: 0.75rem !important;
+        }
+        
+        /* Buttons - larger touch targets */
+        .stButton > button {
+            min-height: 44px;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+        }
+        
+        /* Selectbox - larger touch target */
+        [data-testid="stSelectbox"] > div > div {
+            min-height: 44px;
+            padding: 0.75rem;
+            font-size: 1rem;
+        }
+        
+        /* Quote box - adjust for mobile */
+        .quote-box {
+            padding: 0.75rem;
+            font-size: 0.95rem;
+        }
+        
+        /* Main content area - better padding */
+        .main .block-container {
+            padding-top: 1rem;
+            padding-bottom: 2rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        
+        /* Chat container - full width on mobile */
+        [data-testid="stChatMessageContainer"] {
+            width: 100%;
+        }
+    }
+    
+    /* Extra small devices (phones in portrait) */
+    @media screen and (max-width: 480px) {
+        .main-title {
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+        }
+        
+        .subtitle {
+            font-size: 0.9rem;
+        }
+        
+        .ring-divider {
+            font-size: 1rem;
+            letter-spacing: 3px;
+        }
+        
+        .character-info {
+            padding: 0.75rem;
+            font-size: 0.9rem;
+        }
+        
+        [data-testid="stChatMessage"] {
+            padding: 0.6rem;
+        }
+        
+        [data-testid="stChatMessage"] p {
+            font-size: 0.95rem;
+        }
+    }
+    
+    /* Ensure proper viewport on mobile */
+    @media screen and (max-width: 768px) {
+        .stApp {
+            overflow-x: hidden;
+        }
+        
+        /* Prevent horizontal scrolling */
+        body {
+            overflow-x: hidden;
+        }
+    }
 </style>
 """, unsafe_allow_html=True)
 
