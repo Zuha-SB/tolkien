@@ -22,13 +22,13 @@ A Streamlit chat application that lets you converse with characters from The Lor
 
 2. **Set environment variables** (required):
    ```bash
-   export GOOGLE_CLOUD_PROJECT=your-project-id
+   export GOOGLE_CLOUD_PROJECT_ID=your-project-id
    export GOOGLE_CLOUD_LOCATION=us-central1
    ```
 
    Or use a `.env` file:
    ```
-   GOOGLE_CLOUD_PROJECT=your-project-id
+   GOOGLE_CLOUD_PROJECT_ID=your-project-id
    GOOGLE_CLOUD_LOCATION=us-central1
    ```
 
@@ -69,7 +69,7 @@ The application requires the following environment variables:
 
 | Variable | Description |
 |----------|-------------|
-| `GOOGLE_CLOUD_PROJECT` | Your Google Cloud project ID (required) |
+| `GOOGLE_CLOUD_PROJECT_ID` | Your Google Cloud project ID (required) |
 | `GOOGLE_CLOUD_LOCATION` | Vertex AI region (default: `us-central1`) |
 
 ## 🛠️ Troubleshooting

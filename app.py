@@ -49,7 +49,7 @@ logger = logging.getLogger(__name__)
 # =============================================================================
 
 # Update these with your Google Cloud settings
-PROJECT_ID = os.environ.get("GOOGLE_CLOUD_PROJECT", "your-project-id")
+PROJECT_ID = os.environ.get("GOOGLE_CLOUD_PROJECT_ID")
 LOCATION = os.environ.get("GOOGLE_CLOUD_LOCATION", "us-central1")
 MODEL_NAME = "gemini-2.5-flash"
 
